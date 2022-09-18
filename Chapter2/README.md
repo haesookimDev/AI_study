@@ -3,7 +3,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 
 
 ## Artificial neurons – a brief glimpse into the early history of machine learning 
-> ![image](https://user-images.githubusercontent.com/63633387/190891701-d296950e-5e27-4109-83a8-b66aeb5fd0e6.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190891701-d296950e-5e27-4109-83a8-b66aeb5fd0e6.png)  
 > 
 > 생물학적 뉴런은 화학적, 전기적 신호의 처리와 전달에 관여하는 뇌의 상호 연결된 신경 세포
 >  
@@ -25,7 +25,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > 0\ otherwise 
 > \end{cases}$$
 >   
-> ![image](https://user-images.githubusercontent.com/63633387/190891854-a2673e88-8862-49ff-8146-853c02806173.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190891854-a2673e88-8862-49ff-8146-853c02806173.png)  
 >   
 > 입력 $z = w^Tx + b$가 퍼셉트론의 결정 함수에 의해 이진 출력(0 또는 1)이 방법과 선형 결정 경계에 의해 분리될 수 있는 두 가지 클래스로 구별하는 방법
 #### The perceptron learning rule  
@@ -38,7 +38,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 >   b. 가중치와 바이어스 단위 업데이트
 >   
 >   
-> ![image](https://user-images.githubusercontent.com/63633387/190893585-87889d00-173d-4bf3-9108-f974ee6977b3.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190893585-87889d00-173d-4bf3-9108-f974ee6977b3.png)  
 >   
 >   
 > 두 클래스가 선형 결정 경계로 분리될 수 없는 경우,  
@@ -46,7 +46,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > 그렇지 않으면 퍼셉트론은 가중치 업데이트를 멈추지 않을 것  
 >   
 >   
-> ![image](https://user-images.githubusercontent.com/63633387/190893602-f7bcd2f4-e57b-4a8d-a5d1-952b2cf684ed.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190893602-f7bcd2f4-e57b-4a8d-a5d1-952b2cf684ed.png)  
 >   
 >   
 ## Implementing a perceptron learning algorithm in Python (해당 파이썬 코드는 [여기](https://github.com/ww232330/AI_study/blob/main/Chapter2/Chapter_2_Training_Simple_Machine_Learning_Algorithms_for_Classification.ipynb)에 있음)
@@ -54,7 +54,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 #### Training a perceptron model on the Iris dataset  
 ## Adaptive linear neurons and the convergence of learning 
 >   
-> ![image](https://user-images.githubusercontent.com/63633387/190893789-641655f9-d2bc-483f-8508-9ef6f84c16aa.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190893789-641655f9-d2bc-483f-8508-9ef6f84c16aa.png)  
 >   
 #### Minimizing loss functions with gradient descent  
 >   
@@ -62,18 +62,18 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 >   
 > $$\frac{1}{2n} \displaystyle\sum{(y^(i)-\widehat{y}^(i))^2}$$
 >    
-> ![image](https://user-images.githubusercontent.com/63633387/190896173-7e977e0a-caff-4f17-a3b3-820c8f900583.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190896173-7e977e0a-caff-4f17-a3b3-820c8f900583.png)  
 >   
 > 위의 그림은 MSE와 학습률을 이용해서 최적의 값을 찾아가는 경사하강법을 설명하는 그림이다.
 >   
-> ![image](https://user-images.githubusercontent.com/63633387/190896361-34301ea4-2714-4650-8017-2e07435811b7.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190896361-34301ea4-2714-4650-8017-2e07435811b7.png)  
 >   
 > 위 그림은 학습률이 너무 크면 오히려 파라미터를 최적화하는데에 문제가 생기는 이유를 보여준다.
 >   
 #### Implementing Adaline in Python  
 #### Improving gradient descent through feature scaling  
 >   
-> ![image](https://user-images.githubusercontent.com/63633387/190896400-ca162607-e232-462d-88e9-bddeefdd2cbb.png)
+> ![image](https://user-images.githubusercontent.com/63633387/190896400-ca162607-e232-462d-88e9-bddeefdd2cbb.png)  
 > 각 피쳐들의 수치 범위가 전부 제 각각이면 가중치를 업데이트 할 때 서로 다른 속도를 가지게 되어 안정적인 학습을 진행 하기 힘듦
 > 
 #### Large-scale machine learning and stochastic gradient descent  
