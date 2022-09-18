@@ -11,6 +11,16 @@ Chapter 3: A Tour of Machine Learning Classifiers Using Scikit-Learn
 ## First steps with scikit-learn – training a perceptron  
 ## Modeling class probabilities via logistic regression  
 #### Logistic regression and conditional probabilities  
+>   
+> ![image](https://user-images.githubusercontent.com/63633387/190896820-ccf2b591-c8b5-48c7-bc82-176092a4d640.png)
+>    
+> 로짓 함수는 0 ~ 1 범위의 입력 값을 가져와서 전체 실수 범위에 걸쳐 값으로 변환
+> $$logit(p) = log\frac{p}{1-p}$$
+> $$logit(p) = w_1x_1 + w_2x_2 + \cdots + w_mx_m + b = w^Tx + b$$
+>   
+> ![image](https://user-images.githubusercontent.com/63633387/190896834-31833ce8-95bb-4ef9-8844-3b435711b922.png)  
+>   
+>   
 #### Learning the model weights via the logistic loss function  
 #### Converting an Adaline implementation into an algorithm for logistic regression  
 #### Training a logistic regression model with scikit-learn  
