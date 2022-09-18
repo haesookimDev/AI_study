@@ -3,6 +3,11 @@ Chapter 3: A Tour of Machine Learning Classifiers Using Scikit-Learn
 
 
 ## Choosing a classification algorithm  
+1. 기능 선택 및 레이블링된 교육 사례 수집  
+2. 성능 메트릭 선택  
+3. 학습 알고리즘 선택 및 모델 교육  
+4. 모델의 성능 평가  
+5. 알고리즘의 설정 변경 및 모델 튜닝  
 ## First steps with scikit-learn – training a perceptron  
 ## Modeling class probabilities via logistic regression  
 #### Logistic regression and conditional probabilities  
