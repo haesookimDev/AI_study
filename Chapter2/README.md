@@ -21,8 +21,8 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 >   
 > $$𝜎(z) = 
 > \begin{cases} 
-> 1\;if\;z\geq𝜃\\ 
-> 0\;otherwise 
+> 1\ if\ z\geq𝜃\\ 
+> 0\ otherwise 
 > \end{cases}$$
 >   
 > ![image](https://user-images.githubusercontent.com/63633387/190891854-a2673e88-8862-49ff-8146-853c02806173.png)
