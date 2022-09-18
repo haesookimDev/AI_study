@@ -38,10 +38,17 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 >   b. 가중치와 바이어스 단위 업데이트
 >   
 >   
+> ![image](https://user-images.githubusercontent.com/63633387/190893585-87889d00-173d-4bf3-9108-f974ee6977b3.png)
+>   
+>   
 > 두 클래스가 선형 결정 경계로 분리될 수 없는 경우,  
 > 훈련 데이터 세트(에포크)에 대한 최대 허용 횟수 및/또는 허용되는 잘못 분류된 입력의 개수에 대한 임계값을 설정할 수 있다.  
 > 그렇지 않으면 퍼셉트론은 가중치 업데이트를 멈추지 않을 것  
-> 
+>   
+>   
+> ![image](https://user-images.githubusercontent.com/63633387/190893602-f7bcd2f4-e57b-4a8d-a5d1-952b2cf684ed.png)
+>   
+>   
 ## Implementing a perceptron learning algorithm in Python
 #### An object-oriented perceptron API  
 #### Training a perceptron model on the Iris dataset  
