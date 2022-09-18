@@ -59,7 +59,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 #### Minimizing loss functions with gradient descent  
 >   
 > 결과와 실제 값의 mean squared error (MSE)를 통해 파라미터를 조정한다.
-> $$1\over2n \displaystyle\sum{(y^(i)-\widehat{y}^(i))^2}$$
+> $$\frac{1}{2n} \displaystyle\sum{(y^(i)-\widehat{y}^(i))^2}$$
 >   
 #### Implementing Adaline in Python  
 #### Improving gradient descent through feature scaling  
