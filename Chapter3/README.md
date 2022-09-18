@@ -77,7 +77,7 @@ C 파라미터를 통해 오분류에 대한 패널티를 제어한다. C파라�
   ![image](https://user-images.githubusercontent.com/63633387/190900159-6442941d-59a8-4b52-95a6-ba01f70dcd31.png)  
   위는 대부분의 라이브러리에서 구현되는 이진 결정트리의 정보이득 계산식이다.
   
-  이진 결정트리에서 사용되는 분류 기준은 Gini impurity ($I_G$), entropy ($I_H$) classification error ($I_E$)이다.
+  이진 결정트리에서 사용되는 분류 기준은 Gini impurity $(I_G)$, entropy $(I_H)$ classification error $(I_E)$이다.
   
   ![image](https://user-images.githubusercontent.com/63633387/190900352-c73184a8-e5e9-4153-a330-254a309dda85.png)  
   ![image](https://user-images.githubusercontent.com/63633387/190900380-2a0b5b20-1ef2-47d8-ad4d-022b8c568d44.png)  
