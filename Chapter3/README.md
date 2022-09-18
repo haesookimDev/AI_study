@@ -35,13 +35,23 @@ $𝜎(𝑧)$는 변수 $x$를 모델이 $y$로 예측할 확률이다.
 #### Converting an Adaline implementation into an algorithm for logistic regression  
 #### Training a logistic regression model with scikit-learn  
 #### Tackling overfitting via regularization  
+![image](https://user-images.githubusercontent.com/63633387/190898417-16158175-2f38-4af6-b3c7-cf48612ddfa5.png)  
+과대적합은 학습 데이터에서는 높은 정확도를 보이지만 테스트(실제)데이터에서 일반화되지 않아 성능이 떨어지는 것을 말한다.  
+해당문제는 학습 데이터를 학습 할 만큼 모델의 파라미터가 충분하지 않거나 모델의 데이터의 패턴을 학습 할만큼 데이터의 질이 낮다는 것을 의미한다.  
 ## Maximum margin classification with support vector machines  
+![image](https://user-images.githubusercontent.com/63633387/190898627-a644546d-54b3-4cb6-bd91-d7a1b0fd0563.png)  
+서포트 벡터 머신은 결정 경계와 서포트 벡터 사이의 마진을 최대화하는 최적의 결정 경계를 찾는 분류모델이다. 
 #### Maximum margin intuition  
 #### Dealing with a nonlinearly separable case using slack variables  
+![image](https://user-images.githubusercontent.com/63633387/190898826-7d2af00c-56ee-437a-a540-10ae916c1893.png)  
+C 파라미터를 통해 오분류에 대한 패널티를 제어한다. C파라미터가 크면 오분류를 엄격하게 관리하지만 과대적합의 위험이 있을 수 있다.
+
 #### Alternative implementations in scikit-learn  
 ## Solving nonlinear problems using a kernel SVM  
+서포트 벡터 머신은 비선형 데이터에서도 분류를 가능하게한다.
 #### Kernel methods for linearly inseparable data  
 #### Using the kernel trick to find separating hyperplanes in a high-dimensional space  
+서포트 벡터머신은 비선형데이터를 고차원 특징공간으로 투영하여 나타난 데이터 차원에서 선형 평면을 만들어 분류한다;.
 ## Decision tree learning  
 #### Maximizing IG – getting the most bang for your buck  
 #### Building a decision tree  
