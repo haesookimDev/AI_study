@@ -19,11 +19,11 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > 특정 입력값 $x_i$가 정해진 임계치 $𝜃$보다 크면 1 아니면 0으로 분류하며  
 > 퍼셉트론 알고리즘에서 정의된 결정 함수 $𝜎(∙)$는 단위 계단 함수(아래 그림의 왼쪽형태의 함수를 단위계단 함수라고 함)의 변형이다. 
 >   
-> $$𝜎(z) = 
+> $𝜎(z) = 
 > \begin{cases} 
-> 1\; if\; z\geq0\\ 
-> 0\; otherwise 
-> \end{cases}$$
+> 1\;if\;z\geq0\\ 
+> 0\;otherwise 
+> \end{cases}$
 >   
 > ![image](https://user-images.githubusercontent.com/63633387/190891854-a2673e88-8862-49ff-8146-853c02806173.png)
 >   
