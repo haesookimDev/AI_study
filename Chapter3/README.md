@@ -51,7 +51,11 @@ C 파라미터를 통해 오분류에 대한 패널티를 제어한다. C파라�
 서포트 벡터 머신은 비선형 데이터에서도 분류를 가능하게한다.
 #### Kernel methods for linearly inseparable data  
 #### Using the kernel trick to find separating hyperplanes in a high-dimensional space  
-서포트 벡터머신은 비선형데이터를 고차원 특징공간으로 투영하여 나타난 데이터 차원에서 선형 평면을 만들어 분류한다;.
+서포트 벡터머신은 비선형데이터를 고차원 특징공간으로 투영하여 나타난 데이터 차원에서 선형 평면을 만들어 분류한다.  
+![image](https://user-images.githubusercontent.com/63633387/190899073-398374da-4e48-4b56-8b2f-dfbc2c058cdb.png)  
+![image](https://user-images.githubusercontent.com/63633387/190899087-d4120a30-d0fb-4fce-8916-f81d795a5d82.png)  
+
+
 ## Decision tree learning  
 #### Maximizing IG – getting the most bang for your buck  
 #### Building a decision tree  
