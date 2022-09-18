@@ -49,7 +49,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > ![image](https://user-images.githubusercontent.com/63633387/190893602-f7bcd2f4-e57b-4a8d-a5d1-952b2cf684ed.png)
 >   
 >   
-## Implementing a perceptron learning algorithm in Python
+## Implementing a perceptron learning algorithm in Python (해당 파이썬 코드는 [여기](https://github.com/ww232330/AI_study/blob/main/Chapter2/Chapter_2_Training_Simple_Machine_Learning_Algorithms_for_Classification.ipynb)에 있음)
 #### An object-oriented perceptron API  
 #### Training a perceptron model on the Iris dataset  
 ## Adaptive linear neurons and the convergence of learning 
