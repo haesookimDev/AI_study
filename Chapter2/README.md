@@ -12,6 +12,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 
 #### The formal definition of an artificial neuron  
 > ![image](https://user-images.githubusercontent.com/63633387/190891854-a2673e88-8862-49ff-8146-853c02806173.png)
+> 
 > 입력 z = w^Tx + b가 퍼셉트론의 결정 함수에 의해 이진 출력(0 또는 1)이 방법과 선형 결정 경계에 의해 분리될 수 있는 두 가지 클래스로 구별하는 방법
 #### The perceptron learning rule  
 ## Implementing a perceptron learning algorithm in Python
