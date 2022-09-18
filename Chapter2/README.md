@@ -36,6 +36,12 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > 2. 각 예시 $x^(i)$를 학습  
 >   a. 출력값 $\widehat{y}^(i)$ 계산  
 >   b. 가중치와 바이어스 단위 업데이트
+>   
+>   
+> 두 클래스가 선형 결정 경계로 분리될 수 없는 경우,  
+> 훈련 데이터 세트(에포크)에 대한 최대 허용 횟수 및/또는 허용되는 잘못 분류된 입력의 개수에 대한 임계값을 설정할 수 있다.  
+> 그렇지 않으면 퍼셉트론은 가중치 업데이트를 멈추지 않을 것  
+> 
 ## Implementing a perceptron learning algorithm in Python
 #### An object-oriented perceptron API  
 #### Training a perceptron model on the Iris dataset  
