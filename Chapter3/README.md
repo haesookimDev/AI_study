@@ -16,11 +16,14 @@ Chapter 3: A Tour of Machine Learning Classifiers Using Scikit-Learn
 >    
 > 로짓 함수는 0 ~ 1 범위의 입력 값을 가져와서 전체 실수 범위에 걸쳐 값으로 변환
 > $$logit(p) = log\frac{p}{1-p}$$
+>   
+> 아래는 로짓 함수와 선형 입력간의 관계가 있다고 가정한 수식
 > $$logit(p) = w_1x_1 + w_2x_2 + \cdots + w_mx_m + b = w^Tx + b$$
 >   
 > ![image](https://user-images.githubusercontent.com/63633387/190896834-31833ce8-95bb-4ef9-8844-3b435711b922.png)  
->   
->   
+>  
+>  $$𝜎(𝑧)=\frac{1}{1+e^-z}$$
+>  $$z = w^Tx + b$$
 #### Learning the model weights via the logistic loss function  
 #### Converting an Adaline implementation into an algorithm for logistic regression  
 #### Training a logistic regression model with scikit-learn  
