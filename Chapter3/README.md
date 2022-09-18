@@ -23,7 +23,9 @@ Chapter 3: A Tour of Machine Learning Classifiers Using Scikit-Learn
 > ![image](https://user-images.githubusercontent.com/63633387/190896834-31833ce8-95bb-4ef9-8844-3b435711b922.png)  
 >  
 >  $$𝜎(𝑧)=\frac{1}{1+e^-z}$$
+>  
 >  $$z = w^Tx + b$$
+>  
 #### Learning the model weights via the logistic loss function  
 #### Converting an Adaline implementation into an algorithm for logistic regression  
 #### Training a logistic regression model with scikit-learn  
