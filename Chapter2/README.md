@@ -59,9 +59,22 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 #### Minimizing loss functions with gradient descent  
 >   
 > 결과와 실제 값의 mean squared error (MSE)를 통해 파라미터를 조정한다.
+>   
 > $$\frac{1}{2n} \displaystyle\sum{(y^(i)-\widehat{y}^(i))^2}$$
+>    
+> ![image](https://user-images.githubusercontent.com/63633387/190896173-7e977e0a-caff-4f17-a3b3-820c8f900583.png)
+>   
+> 위의 그림은 MSE와 학습률을 이용해서 최적의 값을 찾아가는 경사하강법을 설명하는 그림이다.
+>   
+> ![image](https://user-images.githubusercontent.com/63633387/190896361-34301ea4-2714-4650-8017-2e07435811b7.png)
+>   
+> 위 그림은 학습률이 너무 크면 오히려 파라미터를 최적화하는데에 문제가 생기는 이유를 보여준다.
 >   
 #### Implementing Adaline in Python  
 #### Improving gradient descent through feature scaling  
+>   
+> ![image](https://user-images.githubusercontent.com/63633387/190896400-ca162607-e232-462d-88e9-bddeefdd2cbb.png)
+> 각 피쳐들의 수치 범위가 전부 제 각각이면 가중치를 업데이트 할 때 서로 다른 속도를 가지게 되어 안정적인 학습을 진행 하기 힘듦
+> 
 #### Large-scale machine learning and stochastic gradient descent  
 ## Summary 
