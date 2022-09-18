@@ -28,7 +28,7 @@ Chapter 3: A Tour of Machine Learning Classifiers Using Scikit-Learn
 >   
 #### Learning the model weights via the logistic loss function  
 ![image](https://user-images.githubusercontent.com/63633387/190898034-922d66c4-d11e-44a8-ab80-b2f3ae97ac8b.png)  
-로지스틱 회귀에서 사용되는 손실 함수이다. 
+로짓함수를 베르누이 분포를 통해 최대 가능도 추정법을 계산한 로지스틱 회귀에서 사용되는 손실 함수이다. 
 ![image](https://user-images.githubusercontent.com/63633387/190898058-e7ce0d9d-defe-495f-9f7f-cc0afd6c79d3.png)  
 $𝜎(𝑧)$는 변수 $x$를 모델이 $y$로 예측할 확률이다.   
 로그를 취하는 이유는 산술연산의 결과가 취급할 수 있는 수의 범위 보다 작아지는 상태인 산술 언더플로의 가능성을 줄이기 위함이다.
@@ -63,9 +63,52 @@ C 파라미터를 통해 오분류에 대한 패널티를 제어한다. C파라�
   지수항을 통해 거리값의 범위는 0(유사도 낮음)과 1(유사도 높음)사이가 된다.
 
 ## Decision tree learning  
+  ![image](https://user-images.githubusercontent.com/63633387/190899836-e866b4a6-d43b-4a9b-b1c7-b4b531fe82e3.png)
+  위의 그림과 같이 나의 가지처럼 뻗어나가며 결과를 결정하는 학습 모델이다.
+  도출된 결과를 해석 할 수 있기 때문에 예측과정에 대한 정보를 얻을 수 있다.
+  노드가 많아지고 깊이가 깊어지면 학습과정에서는 높은 정확도를 얻을 수 있지만 
+  실제 데이터를 이용할 때 일반화가 되지않는 과대적합으로 이어질 수 있다.
+
 #### Maximizing IG – getting the most bang for your buck  
+  ![image](https://user-images.githubusercontent.com/63633387/190900069-32050695-bec1-4e73-8011-0e398dbe33ae.png)  
+  위의 함수는 결정트리에서 최적화에 사용하는 함수이다.  
+  $D$는 데이터 $N$은 노드에서 학습되는 $x$의 수 이며 $I$는 impurity 측정법이며 $p$는 부모, $j$는 자식이다.  
+  정보이득을 최대화 하는 방법은 자식노드에서의 impurity가 낮을 수록 높다
+  ![image](https://user-images.githubusercontent.com/63633387/190900159-6442941d-59a8-4b52-95a6-ba01f70dcd31.png)  
+  위는 대부분의 라이브러리에서 구현되는 이진 결정트리의 정보이득 계산식이다.
+  
+  이진 결정트리에서 사용되는 분류 기준은 Gini impurity ($I_G$), entropy ($I_H$) classification error ($I_E$)이다.
+  
+  ![image](https://user-images.githubusercontent.com/63633387/190900352-c73184a8-e5e9-4153-a330-254a309dda85.png)  
+  ![image](https://user-images.githubusercontent.com/63633387/190900380-2a0b5b20-1ef2-47d8-ad4d-022b8c568d44.png)  
+  ![image](https://user-images.githubusercontent.com/63633387/190900391-7a2d3a34-00af-40dc-a578-058f0a1098cb.png)  
+  
+  $p(i|t)$는 특정 노드, $t$에 대한 클래스 $i$에 속하는 $x$들의 비율이다.
+  
 #### Building a decision tree  
 #### Combining multiple decision trees via random forests  
+  여러 결정트리의 결과를 합쳐서 하나의 결론을 내는 것을 랜덤 포레스트라 부르며 모델의 앙상블이라고 할 수 있다.  
+  방법은 아래와 같다. 
+  1. 크기가 n인 무작위 샘플을 추출한다(학습 데이터 세트에서 무작위로 n개의 $x$를 선택한다).  
+  2. 샘플에서 의사결정 트리를 학습한다.
+    각 노드:  
+    a. 교체하지 않고 무작위로 선택한 특징
+    b. 목적 함수에 따라 최적의 분할을 제공하는 기능, 예를 들어 정보 이득을 최대화하는 기능을 사용하여 노드를 분할  
+  3. 1 ~ 2 k회 단계를 반복한다.  
+  4. 각 트리별 예측을 집계하여 다수결로 클래스 레이블을 할당한다.
+
 ## K-nearest neighbors – a lazy learning algorithm  
+  단순함 때문이 아니라 훈련 데이터에서 차별적 기능을 학습하지 않고 훈련 데이터 세트를 대신 외우기 때문에 'a lazy learning algorithm'으로 불린다.  
+  
+  KNN 알고리즘 자체는 매우 간단하며 다음과 같은 단계로 요약할 수 있다.  
+  1. k의 수와 거리 메트릭을 선택합니다.  
+  2. 분류하고자 하는 데이터 레코드의 가장 가까운 이웃 찾기  
+  3. 다수결로 클래스를 지정한다.  
+  
+  ![image](https://user-images.githubusercontent.com/63633387/190900812-f98d7448-36bb-4df6-9451-9722303d3950.png)  
+  
+  KNN 알고리즘은 분류하고자 하는 지점에 가장 가까운(가장 유사한) 훈련 데이터 세트에서 k개의 예를 찾는다.  
+  데이터 포인트의 클래스 라벨은 k개의 가장 가까운 이웃들 사이의 다수결에 의해 결정
+
 ## Summary 
  
