@@ -25,8 +25,13 @@ Chapter 3: A Tour of Machine Learning Classifiers Using Scikit-Learn
 >  $$𝜎(𝑧)=\frac{1}{1+e^-z}$$
 >  
 >  $$z = w^Tx + b$$
->  
+>   
 #### Learning the model weights via the logistic loss function  
+![image](https://user-images.githubusercontent.com/63633387/190898034-922d66c4-d11e-44a8-ab80-b2f3ae97ac8b.png)
+로지스틱 회귀에서 사용되는 손실 함수이다. 
+![image](https://user-images.githubusercontent.com/63633387/190898058-e7ce0d9d-defe-495f-9f7f-cc0afd6c79d3.png)
+$𝜎(𝑧)$는 변수 $x$를 모델이 $y$로 예측할 확률이다.   
+로그를 취하는 이유는 산술연산의 결과가 취급할 수 있는 수의 범위 보다 작아지는 상태인 산술 언더플로의 가능성을 줄이기 위함이다.
 #### Converting an Adaline implementation into an algorithm for logistic regression  
 #### Training a logistic regression model with scikit-learn  
 #### Tackling overfitting via regularization  
