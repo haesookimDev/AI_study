@@ -35,7 +35,7 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > 1. 가중치와 바이어스를 0 또는 작은 수의 난수로 초기화
 > 2. 각 예시 $x^(i)$를 학습  
 >   a. 출력값 $\widehat{y}^(i)$ 계산  
->   b. 가중치와 바이어스 단위 
+>   b. 가중치와 바이어스 단위 업데이트
 ## Implementing a perceptron learning algorithm in Python
 #### An object-oriented perceptron API  
 #### Training a perceptron model on the Iris dataset  
