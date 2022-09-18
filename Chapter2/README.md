@@ -35,7 +35,11 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > 1. 가중치와 바이어스를 0 또는 작은 수의 난수로 초기화
 > 2. 각 예시 $x^(i)$를 학습  
 >   a. 출력값 $\widehat{y}^(i)$ 계산  
->   b. 가중치와 바이어스 단위 업데이트
+>   b. 가중치와 바이어스 단위 업데이트  
+  
+  ![image](https://user-images.githubusercontent.com/63633387/190900981-d5771aeb-fc5b-4f08-8f02-3ec977349b9f.png)
+
+
 >   
 >   
 > ![image](https://user-images.githubusercontent.com/63633387/190893585-87889d00-173d-4bf3-9108-f974ee6977b3.png)  
@@ -57,14 +61,19 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 > ![image](https://user-images.githubusercontent.com/63633387/190893789-641655f9-d2bc-483f-8508-9ef6f84c16aa.png)  
 >   
 #### Minimizing loss functions with gradient descent  
+  경사하강법을 이용하여 손실 함수를 최소화
 >   
 > 결과와 실제 값의 mean squared error (MSE)를 통해 파라미터를 조정한다.
 >   
-> $$\frac{1}{2n} \displaystyle\sum{(y^(i)-\widehat{y}^(i))^2}$$
+> ![image](https://user-images.githubusercontent.com/63633387/190901145-8da3272a-8aa3-4576-91bb-8d47531e8004.png)  
 >    
 > ![image](https://user-images.githubusercontent.com/63633387/190896173-7e977e0a-caff-4f17-a3b3-820c8f900583.png)  
 >   
-> 위의 그림은 MSE와 학습률을 이용해서 최적의 값을 찾아가는 경사하강법을 설명하는 그림이다.
+> 위의 그림은 MSE와 학습률을 이용해서 최적의 값을 찾아가는 경사하강법을 설명하는 그림이다.  
+  손실함수를 통해 계산된 값을 이용해 학습률만큼 점점 경사를 따라 이동하는 모습이다.
+  
+  ![image](https://user-images.githubusercontent.com/63633387/190901163-49e7d394-dbcf-4287-ab49-de5eb56c518c.png)  
+
 >   
 > ![image](https://user-images.githubusercontent.com/63633387/190896361-34301ea4-2714-4650-8017-2e07435811b7.png)  
 >   
