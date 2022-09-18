@@ -53,6 +53,9 @@ Chapter 2: Training Simple Machine Learning Algorithms for Classification
 #### An object-oriented perceptron API  
 #### Training a perceptron model on the Iris dataset  
 ## Adaptive linear neurons and the convergence of learning 
+>   
+> ![image](https://user-images.githubusercontent.com/63633387/190893789-641655f9-d2bc-483f-8508-9ef6f84c16aa.png)
+>   
 #### Minimizing loss functions with gradient descent  
 #### Implementing Adaline in Python  
 #### Improving gradient descent through feature scaling  
