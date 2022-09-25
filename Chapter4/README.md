@@ -301,8 +301,31 @@ X_train_std = stdsc.fit_transform(X_train)
 X_test_std = stdsc.transform(X_test)
 ```
 ## Selecting meaningful features
+  
+  • Collect more training data
+  • Introduce a penalty for complexity via regularization
+  • Choose a simpler model with fewer parameters
+  • Reduce the dimensionality of the data
+  
 #### L1 and L2 regularization as penalties against model complexity
+  
+  ![image](https://user-images.githubusercontent.com/63633387/192141585-0a0bae26-b029-468a-a840-5fae5de32585.png)
+  
+  ![image](https://user-images.githubusercontent.com/63633387/192141592-10c62729-b838-449a-9ccc-fcfbb57f7a45.png)
+  
+  단순히 가중치의 제곱을 가중치의 절대값의 합으로 대체 
+  
+  L2 정규화와 달리 L1 정규화는 일반적으로 `sparse feature vectors`를 산출하며, 
+  대부분의 `feature weights는 0`이 될 것이다. 특히 훈련 예제보다 관련성이 없는 차원이 더 많은 경우, 
+  관련성이 없는 기능이 많은 고차원 데이터 세트가 있는 경우 `Sparsity`는 실제로 유용할 수 있다. 
+  이러한 의미에서 L1 정규화는 `feature selection`을 위한 기법으로 이해될 수 있다.
+  
 #### A geometric interpretation of L2 regularization
+  
+  ![image](https://user-images.githubusercontent.com/63633387/192141693-5a9cd7f6-e327-46eb-ac63-1fdf6852a169.png)
+  
+  ![image](https://user-images.githubusercontent.com/63633387/192141725-4da09e52-05b9-4109-9665-d7d50fe498f5.png)
+  
 #### Sparse solutions with L1 regularization
   
   ![image](https://user-images.githubusercontent.com/63633387/192140612-da801d22-3130-4327-9e01-589313f11a97.png)
