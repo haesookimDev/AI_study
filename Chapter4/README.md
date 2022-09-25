@@ -4,7 +4,7 @@ Building Good Training Datasets – Data Preprocessing
 이 장에서 다룰 주제는 다음과 같습니다.  
 • 데이터 집합에서 결측값 제거 및 귀속  
 • 기계 학습 알고리즘을 위한 범주형 데이터 구체화  
-• 모델 구성에 대한 관련 기능 선택
+• 모델 구성에 대한 관련 기능 선택  
   
 ## Dealing with missing data  
   
@@ -39,7 +39,7 @@ dtype: int64
 #### Eliminating training examples or features with missing values
   
   결측 데이터를 처리하는 가장 쉬운 방법 중 하나는 데이터 세트에서 해당 기능(열) 또는 교육 예제(행)를 완전히 제거하는 것이다.  
-  결측값이 있는 행은 dropna 방법을 통해 쉽게 삭제할 수 있다.
+  결측값이 있는 행은 dropna 방법을 통해 쉽게 삭제할 수 있다.  
   
 ```python
 df.dropna(axis=0)
@@ -75,12 +75,12 @@ A B C D
 2 10.0 11.0 12.0 NaN
 ```
   
-  너무 많은 피쳐 열을 제거하면 분류기가 클래스를 구별하는 데 필요한 귀중한 정보가 손실될 위험이 있다.  
-  다음 장에서는 결측값을 처리하기 위해 가장 일반적으로 사용되는 대안 중 하나인 보간 기법을 살펴보겠다.
+  너무 많은 피쳐 열을 제거하면 분류기가 클래스를 구별하는 데 필요한 귀중한 정보가 손실될 위험이 있다.   
+  다음 장에서는 결측값을 처리하기 위해 가장 일반적으로 사용되는 대안 중 하나인 보간 기법을 살펴보겠다.  
   
 #### Imputing missing values
   
-  가장 일반적인 보간 기술 중 하나는 `mean imputation` 이며, 여기서는 결측값을 전체 형상 열의 평균값으로 간단히 대치한다.
+  가장 일반적인 보간 기술 중 하나는 `mean imputation` 이며, 여기서는 결측값을 전체 형상 열의 평균값으로 간단히 대치한다.  
   
 ```python
 from sklearn.impute import SimpleImputer
@@ -101,18 +101,18 @@ df.fillna(df.mean())
   이전 섹션에서는 `skickit-learn`의 `SimpleImputer` 클래스를 사용하여 데이터 세트의 결측값을 대치하였다.  
   `estimators`의 두 가지 `essential methods`는 `fit` 와 `transform`이다.  
   `fit`은 훈련 데이터에서 매개 변수를 학습하는 데 사용되며 `transform`은 이러한 매개 변수를 사용하여 데이터를 변환합니다.  
-  `transform`할 데이터 배열은 모형을 `fit`시키는 데 사용된 데이터 배열과 동일한 수의 피쳐를 가져야 합니다.  
+  `transform`할 데이터 배열은 모형을 `fit`시키는 데 사용된 데이터 배열과 동일한 수의 피쳐를 가져야 합니다.   
   ![image](https://user-images.githubusercontent.com/63633387/192139744-8aef565e-f4be-4432-80f8-8f780af14b3c.png)
   
   ![image](https://user-images.githubusercontent.com/63633387/192139765-5f387b41-b428-4afe-ae9e-0a2631cf1b72.png)  
   
   
 ## Handling categorical data
-실제 데이터 세트에서 하나 이상의 `categorical feature` 열을 포함하는 것은 드문 일이 아니다
+실제 데이터 세트에서 하나 이상의 `categorical feature` 열을 포함하는 것은 드문 일이 아니다  
 
-`Ordinal features`는 정렬 또는 순서가 있는 `categorical values`
-이와 반대되는 것을 `Nominal features`라고 한다.
-#### Categorical data encoding with pandas
+`Ordinal features`는 정렬 또는 순서가 있는 `categorical values`  
+이와 반대되는 것을 `Nominal features`라고 한다.  
+#### Categorical data encoding with pandas 
 ```python
 import pandas as pd
 df = pd.DataFrame([
@@ -274,7 +274,7 @@ X_train, X_test, y_train, y_test =\
 ```
 ## Bringing features onto the same scale
   
-  ![image](https://user-images.githubusercontent.com/63633387/192140535-ab0bdf63-cf1a-4034-934d-6ca045d94073.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192140535-ab0bdf63-cf1a-4034-934d-6ca045d94073.png)  
   
 ```python
 from sklearn.preprocessing import MinMaxScaler
@@ -302,36 +302,36 @@ X_test_std = stdsc.transform(X_test)
 ```
 ## Selecting meaningful features
   
-  • Collect more training data
-  • Introduce a penalty for complexity via regularization
-  • Choose a simpler model with fewer parameters
-  • Reduce the dimensionality of the data
+  • Collect more training data  
+  • Introduce a penalty for complexity via regularization  
+  • Choose a simpler model with fewer parameters  
+  • Reduce the dimensionality of the data  
   
 #### L1 and L2 regularization as penalties against model complexity
   
-  ![image](https://user-images.githubusercontent.com/63633387/192141585-0a0bae26-b029-468a-a840-5fae5de32585.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192141585-0a0bae26-b029-468a-a840-5fae5de32585.png)  
   
-  ![image](https://user-images.githubusercontent.com/63633387/192141592-10c62729-b838-449a-9ccc-fcfbb57f7a45.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192141592-10c62729-b838-449a-9ccc-fcfbb57f7a45.png)  
   
-  단순히 가중치의 제곱을 가중치의 절대값의 합으로 대체 
+  단순히 가중치의 제곱을 가중치의 절대값의 합으로 대체  
   
-  L2 정규화와 달리 L1 정규화는 일반적으로 `sparse feature vectors`를 산출하며, 
-  대부분의 `feature weights는 0`이 될 것이다. 특히 훈련 예제보다 관련성이 없는 차원이 더 많은 경우, 
-  관련성이 없는 기능이 많은 고차원 데이터 세트가 있는 경우 `Sparsity`는 실제로 유용할 수 있다. 
-  이러한 의미에서 L1 정규화는 `feature selection`을 위한 기법으로 이해될 수 있다.
+  L2 정규화와 달리 L1 정규화는 일반적으로 `sparse feature vectors`를 산출하며,  
+  대부분의 `feature weights는 0`이 될 것이다. 특히 훈련 예제보다 관련성이 없는 차원이 더 많은 경우,  
+  관련성이 없는 기능이 많은 고차원 데이터 세트가 있는 경우 `Sparsity`는 실제로 유용할 수 있다.  
+  이러한 의미에서 L1 정규화는 `feature selection`을 위한 기법으로 이해될 수 있다.  
   
 #### A geometric interpretation of L2 regularization
   
-  ![image](https://user-images.githubusercontent.com/63633387/192141693-5a9cd7f6-e327-46eb-ac63-1fdf6852a169.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192141693-5a9cd7f6-e327-46eb-ac63-1fdf6852a169.png)  
   
-  ![image](https://user-images.githubusercontent.com/63633387/192141725-4da09e52-05b9-4109-9665-d7d50fe498f5.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192141725-4da09e52-05b9-4109-9665-d7d50fe498f5.png)  
   
-  L1 은 L2 에 비해 이상치/에러값으로 부터 영향을 크게 받지 않는 특성을 가진다. 
-  0에서 미분이 불가능
-  L2이상치가 들어오면 오차가 제곱이 돼서 이상치에 영향을 더 받기 때문에 이상치가 있는 경우 적용하기 힘든 방법론
+  L1 은 L2 에 비해 이상치/에러값으로 부터 영향을 크게 받지 않는 특성을 가진다.   
+  0에서 미분이 불가능  
+  L2이상치가 들어오면 오차가 제곱이 돼서 이상치에 영향을 더 받기 때문에 이상치가 있는 경우 적용하기 힘든 방법론   
 #### Sparse solutions with L1 regularization
   
-  ![image](https://user-images.githubusercontent.com/63633387/192140612-da801d22-3130-4327-9e01-589313f11a97.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192140612-da801d22-3130-4327-9e01-589313f11a97.png)  
   
 ```python
 from sklearn.linear_model import LogisticRegression
@@ -405,16 +405,16 @@ ax.legend(loc='upper center',
 plt.show()
 ```
   
-  ![image](https://user-images.githubusercontent.com/63633387/192140792-6cb8149e-e3a5-41bb-999d-b395bce8d90d.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192140792-6cb8149e-e3a5-41bb-999d-b395bce8d90d.png)  
   
 #### Sequential feature selection algorithms
   
-  모델의 복잡성을 줄이고 과적합을 방지하는 방법은 `feature selection`을 통한 `dimensionality reduction`이며, 
-  이는 특히 비정규화된 모델에 유용 
-  `dimensionality reduction` 기술에는 `feature selection`과 `feature extraction`이라는 두 가지 주요 범주가 있다. 
+  모델의 복잡성을 줄이고 과적합을 방지하는 방법은 `feature selection`을 통한 `dimensionality reduction`이며,  
+  이는 특히 비정규화된 모델에 유용  
+  `dimensionality reduction` 기술에는 `feature selection`과 `feature extraction`이라는 두 가지 주요 범주가 있다.  
   
-  `feature selection`은 원래 피쳐의 하위 집합을 선택하는 반면, 
-  `feature extraction`에서는 피쳐 집합에서 정보를 도출하여 새 `feature subspace`을 구성한다.
+  `feature selection`은 원래 피쳐의 하위 집합을 선택하는 반면,  
+  `feature extraction`에서는 피쳐 집합에서 정보를 도출하여 새 `feature subspace`을 구성한다.  
   
   1. k = d로 알고리즘을 초기화. 여기서 d는 `전체 feature space` $X_d$의 `dimensionality`
   2. 기준을 최대화하는 특징 $x^–$을 구한다: $x^– = argmaxJ(X_k – x)$, $x \in X_k$
@@ -494,7 +494,7 @@ plt.tight_layout()
 plt.show()
 ```
   
-  ![image](https://user-images.githubusercontent.com/63633387/192140967-18cf4346-4181-4b39-916a-c2947ef693ad.png)
+  ![image](https://user-images.githubusercontent.com/63633387/192140967-18cf4346-4181-4b39-916a-c2947ef693ad.png)  
   
 ```python
 k3 = list(sbs.subsets_[10])
@@ -554,8 +554,8 @@ plt.show()
 12) Nonflavanoid phenols 0.013354
 13) Ash 0.013279
 ```
-  와인 데이터 세트의 다양한 기능을 상대적 중요도에 따라 순위를 매기는 그림 
-  기능 중요도 값은 최대 1.0까지 합치도록 표준화
+  와인 데이터 세트의 다양한 기능을 상대적 중요도에 따라 순위를 매기는 그림  
+  기능 중요도 값은 최대 1.0까지 합치도록 표준화  
   ![image](https://user-images.githubusercontent.com/63633387/192140159-4d17b3ca-a214-4548-afa9-5c7e6be3760c.png)
   
 ```python
