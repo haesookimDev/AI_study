@@ -392,7 +392,7 @@ plt.show()
   
   1. k = d로 알고리즘을 초기화. 여기서 d는 `전체 feature space` $X_d$의 `dimensionality`
   2. 기준을 최대화하는 특징 $x^–$을 구한다: $x^– = argmaxJ(X_k – x)$, $x \in X_k$
-  3. `feature set`에서 `feature` $x^–$을 제거한다: $X~k–1~ &nbsp= &nbspX_k&nbsp – &nbspx^–; k&nbsp =&nbsp k – 1.$
+  3. `feature set`에서 `feature` $x^–$을 제거한다: $X_{k–1}\ =\ X_k\ –\ x^–\ ; k = k – 1.$
   4. k가 원하는 피쳐의 수와 같으면 종료하고, 그렇지 않으면 2단계로 이동합니다.
   
 ```python
