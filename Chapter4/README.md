@@ -80,7 +80,7 @@ A B C D
   
 #### Imputing missing values
   
-  가장 일반적인 보간 기술 중 하나는 $mean imputation$ 이며, 여기서는 결측값을 전체 형상 열의 평균값으로 간단히 교체한다.
+  가장 일반적인 보간 기술 중 하나는 `mean imputation` 이며, 여기서는 결측값을 전체 형상 열의 평균값으로 간단히 교체한다.
   
 ```python
 from sklearn.impute import SimpleImputer
