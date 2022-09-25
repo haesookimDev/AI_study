@@ -326,6 +326,9 @@ X_test_std = stdsc.transform(X_test)
   
   ![image](https://user-images.githubusercontent.com/63633387/192141725-4da09e52-05b9-4109-9665-d7d50fe498f5.png)
   
+  L1 은 L2 에 비해 이상치/에러값으로 부터 영향을 크게 받지 않는 특성을 가진다. 
+  0에서 미분이 불가능
+  L2이상치가 들어오면 오차가 제곱이 돼서 이상치에 영향을 더 받기 때문에 이상치가 있는 경우 적용하기 힘든 방법론
 #### Sparse solutions with L1 regularization
   
   ![image](https://user-images.githubusercontent.com/63633387/192140612-da801d22-3130-4327-9e01-589313f11a97.png)
